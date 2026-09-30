@@ -28,6 +28,18 @@ from app.models.social import (
     Team,
     TeamMember,
 )
+from app.models.training import (
+    TrainingProgram,
+    ProgramWeek,
+    ProgramDay,
+    ExerciseProgression,
+    RecoveryAssessment,
+    WeeklyReport,
+    GoalTracking,
+    BodyMeasurement,
+    ProgressPhoto,
+    InjuryRiskAssessment,
+)
 
 __all__ = [
     "User",
@@ -56,4 +68,15 @@ __all__ = [
     "UserBadge",
     "Team",
     "TeamMember",
+    # Phase 8
+    "TrainingProgram",
+    "ProgramWeek",
+    "ProgramDay",
+    "ExerciseProgression",
+    "RecoveryAssessment",
+    "WeeklyReport",
+    "GoalTracking",
+    "BodyMeasurement",
+    "ProgressPhoto",
+    "InjuryRiskAssessment",
 ]

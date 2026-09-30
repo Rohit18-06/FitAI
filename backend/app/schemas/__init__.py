@@ -59,6 +59,29 @@ from app.schemas.coach import (
     CoachSidebarStats,
 )
 
+# Phase 8: AI Personal Trainer & Smart Coaching schemas
+from app.schemas.training import (
+    ProgramDayExercise,
+    ProgramDayResponse,
+    ProgramWeekResponse,
+    TrainingProgramCreate,
+    TrainingProgramResponse,
+    CompleteDayRequest,
+    ExerciseProgressionCreate,
+    ExerciseProgressionResponse,
+    RecoveryAssessmentResponse,
+    WeeklyReportResponse,
+    GoalCreate,
+    GoalUpdateProgress,
+    GoalResponse,
+    BodyMeasurementCreate,
+    BodyMeasurementResponse,
+    ProgressPhotoCreate,
+    ProgressPhotoResponse,
+    InjuryRiskResponse,
+    PlateauReport,
+)
+
 __all__ = [
     # Auth
     "RegisterRequest",
@@ -115,4 +138,25 @@ __all__ = [
     "CoachConversationItem",
     "ConversationHistoryResponse",
     "CoachSidebarStats",
+    # Phase 8 Training
+    "ProgramDayExercise",
+    "ProgramDayResponse",
+    "ProgramWeekResponse",
+    "TrainingProgramCreate",
+    "TrainingProgramResponse",
+    "CompleteDayRequest",
+    "ExerciseProgressionCreate",
+    "ExerciseProgressionResponse",
+    "RecoveryAssessmentResponse",
+    "WeeklyReportResponse",
+    "GoalCreate",
+    "GoalUpdateProgress",
+    "GoalResponse",
+    "BodyMeasurementCreate",
+    "BodyMeasurementResponse",
+    "ProgressPhotoCreate",
+    "ProgressPhotoResponse",
+    "InjuryRiskResponse",
+    "PlateauReport",
 ]
+

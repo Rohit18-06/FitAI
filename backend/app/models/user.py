@@ -74,6 +74,31 @@ class User(Base):
     notifications = relationship(
         "Notification", back_populates="user", cascade="all, delete-orphan", lazy="select"
     )
+    # Phase 8: AI Personal Trainer
+    training_programs = relationship(
+        "TrainingProgram", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
+    exercise_progressions = relationship(
+        "ExerciseProgression", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
+    recovery_assessments = relationship(
+        "RecoveryAssessment", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
+    weekly_reports = relationship(
+        "WeeklyReport", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
+    goals = relationship(
+        "GoalTracking", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
+    body_measurements = relationship(
+        "BodyMeasurement", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
+    progress_photos = relationship(
+        "ProgressPhoto", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
+    injury_assessments = relationship(
+        "InjuryRiskAssessment", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
 
     def __repr__(self) -> str:
         return f"<User(id={self.id}, email={self.email!r}, username={self.username!r})>"

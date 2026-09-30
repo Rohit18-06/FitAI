@@ -28,6 +28,12 @@ import { renderTeamsPage } from './pages/teams';
 import { renderAchievementsPage } from './pages/achievements';
 import { renderAthletePage } from './pages/athlete';
 
+// Phase 8: AI Personal Trainer & Smart Coaching
+import { renderTrainingProgramsPage } from './pages/trainingPrograms';
+import { renderSmartCoachPage } from './pages/smartCoach';
+import { renderProgressionsPage } from './pages/progressions';
+import { renderBodyGoalsPage } from './pages/bodyGoals';
+
 export function initApp(): void {
   // 1. Initialize animated ambient glassmorphism background
   initBackground();
@@ -60,7 +66,13 @@ export function initApp(): void {
     .addRoute('/challenges', () => renderChallengesPage(), true)
     .addRoute('/teams', () => renderTeamsPage(), true)
     .addRoute('/achievements', () => renderAchievementsPage(), true)
-    .addRoute('/athlete/:username', (params) => renderAthletePage(params), true);
+    .addRoute('/athlete/:username', (params) => renderAthletePage(params), true)
+
+    // Phase 8: AI Personal Trainer routes
+    .addRoute('/training-programs', () => renderTrainingProgramsPage(), true)
+    .addRoute('/smart-coach', () => renderSmartCoachPage(), true)
+    .addRoute('/progressions', () => renderProgressionsPage(), true)
+    .addRoute('/body-goals', () => renderBodyGoalsPage(), true);
 
   // 3. Resolve initial route
   router.resolve();

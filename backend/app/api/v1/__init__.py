@@ -23,6 +23,8 @@ from app.api.v1 import (
     teams,
     leaderboards,
     profiles,
+    training_programs,
+    training,
 )
 
 router = APIRouter(prefix="/v1")
@@ -54,5 +56,9 @@ router.include_router(badges.router)
 router.include_router(teams.router)
 router.include_router(leaderboards.router)
 router.include_router(profiles.router)
+
+# Phase 8 – AI Personal Trainer & Smart Coaching
+router.include_router(training_programs.router)
+router.include_router(training.router)
 
 __all__ = ["router"]

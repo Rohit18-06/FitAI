@@ -36,6 +36,11 @@ export function renderNavbar(activePath = '/dashboard'): HTMLElement {
     { label: 'Challenges', path: '/challenges', icon: 'swords' },
     { label: 'Teams', path: '/teams', icon: 'shield' },
     { label: 'Achievements', path: '/achievements', icon: 'award' },
+    // Phase 8: AI Personal Trainer & Smart Coaching
+    { label: 'Programs', path: '/training-programs', icon: 'calendar' },
+    { label: 'Smart Coach', path: '/smart-coach', icon: 'brain' },
+    { label: 'Progressions', path: '/progressions', icon: 'trending-up' },
+    { label: 'Body & Goals', path: '/body-goals', icon: 'target' },
     { label: 'Profile', path: '/profile', icon: 'user' },
   ];
 

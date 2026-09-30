@@ -701,3 +701,220 @@ export interface PublicProfileResponse {
   is_friend: boolean;
 }
 
+// ═══════════════════════════════════════════════════════════════
+// Phase 8: AI Personal Trainer & Smart Coaching Types
+// ═══════════════════════════════════════════════════════════════
+
+export interface ProgramDayExercise {
+  name: string;
+  sets: number;
+  reps: string;
+  rest_seconds: number;
+  notes?: string | null;
+}
+
+export interface ProgramDayResponse {
+  id: number;
+  day_number: number;
+  day_name: string;
+  focus: string;
+  exercises: ProgramDayExercise[];
+  warmup: string[];
+  cooldown: string[];
+  estimated_duration_min: number;
+  completed: boolean;
+  completed_at?: string | null;
+}
+
+export interface ProgramWeekResponse {
+  id: number;
+  week_number: number;
+  theme?: string | null;
+  intensity_pct: number;
+  volume_modifier: number;
+  notes?: string | null;
+  days: ProgramDayResponse[];
+}
+
+export interface TrainingProgramCreate {
+  fitness_goal: string;
+  fitness_level: string;
+  duration_weeks: number;
+  days_per_week: number;
+}
+
+export interface TrainingProgramResponse {
+  id: number;
+  user_id: number;
+  title: string;
+  description?: string | null;
+  fitness_goal: string;
+  fitness_level: string;
+  duration_weeks: number;
+  days_per_week: number;
+  is_active: boolean;
+  ai_notes?: string | null;
+  weeks: ProgramWeekResponse[];
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ExerciseProgressionCreate {
+  exercise_name: string;
+  weight_kg?: number;
+  sets: number;
+  reps: number;
+  rpe?: number;
+  notes?: string;
+}
+
+export interface ExerciseProgressionResponse {
+  id: number;
+  user_id: number;
+  exercise_name: string;
+  weight_kg?: number | null;
+  sets: number;
+  reps: number;
+  rpe?: number | null;
+  one_rep_max_est?: number | null;
+  notes?: string | null;
+  recorded_at: string;
+}
+
+export interface RecoveryAssessmentResponse {
+  id: number;
+  user_id: number;
+  score: number;
+  status: string;
+  sleep_score?: number | null;
+  hrv_score?: number | null;
+  resting_hr_score?: number | null;
+  workout_load_score?: number | null;
+  recommendation?: string | null;
+  components: Record<string, any>;
+  computed_at: string;
+}
+
+export interface PlateauReport {
+  detected: boolean;
+  plateau_type?: string | null;
+  duration_days: number;
+  severity: string;
+  recommendation?: string | null;
+  data_points: Array<{ date: string; value: number }>;
+}
+
+export interface InjuryRiskFactor {
+  factor: string;
+  severity: string;
+  detail: string;
+}
+
+export interface InjuryRiskResponse {
+  id: number;
+  user_id: number;
+  risk_level: string;
+  risk_score: number;
+  factors: InjuryRiskFactor[];
+  corrective_actions: string[];
+  mobility_notes?: string | null;
+  recommendation?: string | null;
+  assessed_at: string;
+}
+
+export interface BodyMeasurementCreate {
+  weight_kg?: number;
+  body_fat_pct?: number;
+  chest_cm?: number;
+  waist_cm?: number;
+  hips_cm?: number;
+  neck_cm?: number;
+  left_arm_cm?: number;
+  right_arm_cm?: number;
+  left_thigh_cm?: number;
+  right_thigh_cm?: number;
+  notes?: string;
+}
+
+export interface BodyMeasurementResponse {
+  id: number;
+  user_id: number;
+  weight_kg?: number | null;
+  body_fat_pct?: number | null;
+  chest_cm?: number | null;
+  waist_cm?: number | null;
+  hips_cm?: number | null;
+  neck_cm?: number | null;
+  left_arm_cm?: number | null;
+  right_arm_cm?: number | null;
+  left_thigh_cm?: number | null;
+  right_thigh_cm?: number | null;
+  notes?: string | null;
+  measured_at: string;
+}
+
+export interface ProgressPhotoCreate {
+  photo_type: string;
+  filename: string;
+  file_path?: string;
+  notes?: string;
+}
+
+export interface ProgressPhotoResponse {
+  id: number;
+  user_id: number;
+  photo_type: string;
+  filename: string;
+  ai_analysis?: string | null;
+  body_fat_estimate?: number | null;
+  muscle_score?: number | null;
+  notes?: string | null;
+  taken_at: string;
+}
+
+export interface GoalCreate {
+  goal_type: string;
+  title: string;
+  description?: string;
+  target_value?: number;
+  unit?: string;
+  start_value?: number;
+  target_date?: string;
+}
+
+export interface GoalResponse {
+  id: number;
+  user_id: number;
+  goal_type: string;
+  title: string;
+  description?: string | null;
+  target_value?: number | null;
+  current_value: number;
+  unit?: string | null;
+  start_value?: number | null;
+  completion_pct: number;
+  status: string;
+  target_date?: string | null;
+  completed_at?: string | null;
+  milestones: any[];
+  created_at: string;
+  updated_at: string;
+}
+
+export interface WeeklyReportResponse {
+  id: number;
+  user_id: number;
+  week_start: string;
+  week_end: string;
+  training_summary?: string | null;
+  recovery_summary?: string | null;
+  nutrition_summary?: string | null;
+  sleep_summary?: string | null;
+  progress_score: number;
+  highlights: string[];
+  recommendations: string[];
+  ai_coach_notes?: string | null;
+  created_at: string;
+}
+
+

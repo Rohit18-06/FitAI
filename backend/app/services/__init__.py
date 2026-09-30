@@ -33,6 +33,17 @@ from app.services.social_service import (
     LeaderboardService,
     SocialProfileService,
 )
+from app.services.training_ai_service import (
+    TrainingProgramService,
+    ExerciseProgressionService,
+    RecoveryAIService,
+    PlateauDetectorService,
+    InjuryRiskService,
+    BodyMeasurementService,
+    ProgressPhotoService,
+    GoalTrackingService,
+    WeeklyReportService,
+)
 
 __all__ = [
     "AuthService",
@@ -64,5 +75,14 @@ __all__ = [
     "TeamService",
     "LeaderboardService",
     "SocialProfileService",
+    "TrainingProgramService",
+    "ExerciseProgressionService",
+    "RecoveryAIService",
+    "PlateauDetectorService",
+    "InjuryRiskService",
+    "BodyMeasurementService",
+    "ProgressPhotoService",
+    "GoalTrackingService",
+    "WeeklyReportService",
 ]
 
