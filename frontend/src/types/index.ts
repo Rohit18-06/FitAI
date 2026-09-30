@@ -374,3 +374,159 @@ export interface CoachSidebarStats {
   active_workout_plan: string | null;
 }
 
+// ── Phase 6: Wearables & Health Intelligence ──────────────────
+export interface WearableConnectRequest {
+  provider: string;
+  device_name: string;
+  device_identifier?: string;
+  battery_level?: number;
+}
+
+export interface WearableDeviceResponse {
+  id: number;
+  user_id: number;
+  provider: string;
+  device_name: string;
+  device_identifier?: string | null;
+  battery_level: number;
+  is_connected: boolean;
+  last_sync: string;
+  created_at: string;
+}
+
+export interface HealthConnectSyncPayload {
+  provider?: string;
+  steps?: number;
+  calories_burned?: number;
+  distance_km?: number;
+  active_minutes?: number;
+  heart_rate?: number;
+  resting_heart_rate?: number;
+  hrv_rmssd?: number;
+  sleep_duration_hours?: number;
+  deep_sleep_hours?: number;
+  rem_sleep_hours?: number;
+  sleep_score?: number;
+  weight_kg?: number;
+  height_cm?: number;
+  body_fat_pct?: number;
+  vo2_max?: number;
+}
+
+export interface HealthConnectSyncResponse {
+  synced: boolean;
+  provider: string;
+  records_updated: Record<string, any>;
+  timestamp: string;
+}
+
+export interface HealthConnectStatusResponse {
+  connected: boolean;
+  active_devices_count: number;
+  connected_providers: string[];
+  last_sync: string | null;
+  supported_providers: string[];
+}
+
+export interface SleepCreate {
+  duration_hours: number;
+  deep_sleep_hours?: number;
+  rem_sleep_hours?: number;
+  sleep_score?: number;
+  bed_time?: string;
+  wake_time?: string;
+}
+
+export interface SleepResponse {
+  id: number;
+  user_id: number;
+  duration_hours: number;
+  deep_sleep_hours: number;
+  rem_sleep_hours: number;
+  light_sleep_hours: number;
+  sleep_score: number;
+  bed_time: string;
+  wake_time: string;
+  created_at: string;
+}
+
+export interface HeartRateCreate {
+  current_hr: number;
+  resting_hr?: number;
+  max_hr?: number;
+  hrv_rmssd?: number;
+  vo2_max?: number;
+  zone_1_mins?: number;
+  zone_2_mins?: number;
+  zone_3_mins?: number;
+  zone_4_mins?: number;
+  zone_5_mins?: number;
+}
+
+export interface HeartRateResponse {
+  id: number;
+  user_id: number;
+  current_hr: number;
+  average_hr: number;
+  resting_hr: number;
+  max_hr: number;
+  hrv_rmssd?: number | null;
+  vo2_max?: number | null;
+  hr_zone_1_mins: number;
+  hr_zone_2_mins: number;
+  hr_zone_3_mins: number;
+  hr_zone_4_mins: number;
+  hr_zone_5_mins: number;
+  created_at: string;
+}
+
+export interface RecoveryResponse {
+  recovery_score: number;
+  status: string;
+  recommendation: string;
+  components: Record<string, any>;
+  latest_sleep: Record<string, any>;
+  latest_hr: Record<string, any>;
+  computed_at: string;
+}
+
+export interface PersonalRecordCreate {
+  record_type: string;
+  record_name: string;
+  value: number;
+  unit: string;
+  notes?: string;
+}
+
+export interface PersonalRecordResponse {
+  id: number;
+  user_id: number;
+  record_type: string;
+  record_name: string;
+  value: number;
+  unit: string;
+  notes?: string | null;
+  achieved_at: string;
+  created_at: string;
+}
+
+export interface NotificationCreate {
+  type: string;
+  title: string;
+  message: string;
+  priority?: string;
+  action_url?: string;
+}
+
+export interface NotificationResponse {
+  id: number;
+  user_id: number;
+  type: string;
+  title: string;
+  message: string;
+  priority: string;
+  action_url?: string | null;
+  is_read: boolean;
+  created_at: string;
+}
+

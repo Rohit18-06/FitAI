@@ -11,6 +11,11 @@ from app.models.workout_plan import WorkoutPlan
 from app.models.form_analysis import FormAnalysisRecord
 from app.models.health_insight import HealthInsight
 from app.models.coach_conversation import CoachConversation
+from app.models.wearable_device import WearableDevice
+from app.models.sleep_record import SleepRecord
+from app.models.heart_rate_record import HeartRateRecord
+from app.models.personal_record import PersonalRecord
+from app.models.notification import Notification
 
 __all__ = [
     "User",
@@ -24,4 +29,9 @@ __all__ = [
     "FormAnalysisRecord",
     "HealthInsight",
     "CoachConversation",
+    "WearableDevice",
+    "SleepRecord",
+    "HeartRateRecord",
+    "PersonalRecord",
+    "Notification",
 ]

@@ -13,6 +13,15 @@ from app.services.video_analyzer_service import VideoAnalyzerService
 from app.services.health_insight_service import HealthInsightService
 from app.services.dashboard_service import DashboardService
 from app.services.analytics_service import AnalyticsService
+from app.services.wearable_service import (
+    WearableDeviceService,
+    HealthConnectSyncService,
+    SleepService,
+    HeartRateService,
+    RecoveryService,
+    PersonalRecordService,
+    NotificationService,
+)
 
 __all__ = [
     "AuthService",
@@ -28,4 +37,12 @@ __all__ = [
     "HealthInsightService",
     "DashboardService",
     "AnalyticsService",
+    "WearableDeviceService",
+    "HealthConnectSyncService",
+    "SleepService",
+    "HeartRateService",
+    "RecoveryService",
+    "PersonalRecordService",
+    "NotificationService",
 ]
+

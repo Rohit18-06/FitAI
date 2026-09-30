@@ -97,6 +97,10 @@ export async function renderDashboardPage(): Promise<void> {
           <i data-lucide="scale"></i>
           <span>Update BMI</span>
         </button>
+        <a href="#/wearables" class="btn btn--secondary" id="action-wearables" style="display: inline-flex; align-items: center; gap: 8px;">
+          <i data-lucide="watch"></i>
+          <span>Wearables & Recovery</span>
+        </a>
       </div>
     </div>
 

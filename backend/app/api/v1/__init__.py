@@ -16,6 +16,7 @@ from app.api.v1 import (
     dashboard,
     analytics,
     coach,
+    integrations,
 )
 
 router = APIRouter(prefix="/v1")
@@ -36,5 +37,8 @@ router.include_router(insights.router)
 router.include_router(dashboard.router)
 router.include_router(analytics.router)
 router.include_router(coach.router)
+
+# Phase 6 – Wearables & Real-Time Health Intelligence
+router.include_router(integrations.router)
 
 __all__ = ["router"]

@@ -17,6 +17,7 @@ import { renderBMIPage } from './pages/bmi';
 import { renderCaloriesPage } from './pages/calories';
 import { renderWaterPage } from './pages/water';
 import { renderStepsPage } from './pages/steps';
+import { renderWearablesPage } from './pages/wearables';
 
 export function initApp(): void {
   // 1. Initialize animated ambient glassmorphism background
@@ -30,6 +31,7 @@ export function initApp(): void {
 
     // Protected core routes
     .addRoute('/dashboard', () => renderDashboardPage(), true)
+    .addRoute('/wearables', () => renderWearablesPage(), true)
     .addRoute('/coach', () => renderCoachPage(), true)
     .addRoute('/bmi', () => renderBMIPage(), true)
     .addRoute('/calories', () => renderCaloriesPage(), true)

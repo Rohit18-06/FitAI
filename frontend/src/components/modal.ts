@@ -32,7 +32,7 @@ export function closeModal(): void {
   }
 }
 
-function openModal(title: string, bodyHtml: string, icon = 'plus-circle'): HTMLElement {
+export function openModal(title: string, bodyHtml: string, icon = 'plus-circle'): HTMLElement {
   closeModal();
 
   const overlay = document.createElement('div');

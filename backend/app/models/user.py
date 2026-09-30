@@ -57,6 +57,21 @@ class User(Base):
     coach_conversations = relationship(
         "CoachConversation", back_populates="user", cascade="all, delete-orphan", lazy="select"
     )
+    wearable_devices = relationship(
+        "WearableDevice", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
+    sleep_records = relationship(
+        "SleepRecord", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
+    heart_rate_records = relationship(
+        "HeartRateRecord", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
+    personal_records = relationship(
+        "PersonalRecord", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
+    notifications = relationship(
+        "Notification", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
 
     def __repr__(self) -> str:
         return f"<User(id={self.id}, email={self.email!r}, username={self.username!r})>"
