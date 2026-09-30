@@ -530,3 +530,174 @@ export interface NotificationResponse {
   created_at: string;
 }
 
+// ── Phase 7: Social Fitness Ecosystem ────────────────────────
+export interface FriendshipResponse {
+  id: number;
+  requester_id: number;
+  receiver_id: number;
+  status: string;
+  requester_username?: string | null;
+  receiver_username?: string | null;
+  friend_user_id?: number;
+  friend_username?: string;
+  friend_avatar?: string | null;
+  friend_bio?: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface UserSearchResponse {
+  id: number;
+  username: string;
+  bio?: string | null;
+  avatar?: string | null;
+  level: number;
+  is_friend: boolean;
+  friend_status?: string | null;
+  is_following: boolean;
+}
+
+export interface FollowResponse {
+  id: number;
+  follower_id: number;
+  following_id: number;
+  username: string;
+  bio?: string | null;
+  avatar?: string | null;
+  created_at: string;
+}
+
+export interface ActivityFeedResponse {
+  id: number;
+  user_id: number;
+  username: string;
+  avatar?: string | null;
+  activity_type: string;
+  title: string;
+  description?: string | null;
+  metadata_json?: string | null;
+  created_at: string;
+}
+
+export interface ChallengeCreate {
+  title: string;
+  description?: string;
+  challenge_type: string;
+  target_value: number;
+  duration_days?: number;
+  reward_xp?: number;
+}
+
+export interface ChallengeParticipantResponse {
+  id: number;
+  challenge_id: number;
+  user_id: number;
+  username?: string | null;
+  progress: number;
+  completed: boolean;
+  joined_at: string;
+}
+
+export interface ChallengeResponse {
+  id: number;
+  title: string;
+  description?: string | null;
+  challenge_type: string;
+  target_value: number;
+  duration_days: number;
+  reward_xp: number;
+  created_by?: number | null;
+  creator_username?: string | null;
+  start_date: string;
+  end_date: string;
+  is_active: boolean;
+  participants_count: number;
+  my_progress?: number | null;
+  is_joined: boolean;
+  is_completed: boolean;
+}
+
+export interface UserLevelResponse {
+  id: number;
+  user_id: number;
+  xp: number;
+  level: number;
+  total_workouts: number;
+  total_steps: number;
+  total_calories_burned: number;
+  next_level_xp: number;
+  progress_percent: number;
+}
+
+export interface BadgeResponse {
+  id: number;
+  name: string;
+  description: string;
+  icon: string;
+  category: string;
+  xp_reward: number;
+  is_earned?: boolean;
+  earned_at?: string | null;
+}
+
+export interface AchievementsOverviewResponse {
+  total_badges: number;
+  earned_count: number;
+  badges: BadgeResponse[];
+  user_level: UserLevelResponse;
+}
+
+export interface TeamCreate {
+  name: string;
+  description?: string;
+}
+
+export interface TeamMemberResponse {
+  id: number;
+  team_id: number;
+  user_id: number;
+  username: string;
+  role: string;
+  joined_at: string;
+}
+
+export interface TeamResponse {
+  id: number;
+  name: string;
+  description?: string | null;
+  owner_id: number;
+  owner_username?: string | null;
+  members_count: number;
+  is_member: boolean;
+  my_role?: string | null;
+  created_at: string;
+  members?: TeamMemberResponse[] | null;
+}
+
+export interface LeaderboardEntry {
+  rank: number;
+  user_id: number;
+  username: string;
+  avatar?: string | null;
+  value: number;
+  unit: string;
+  level: number;
+}
+
+export interface PublicProfileResponse {
+  username: string;
+  avatar?: string | null;
+  bio?: string | null;
+  level: number;
+  xp: number;
+  badges: BadgeResponse[];
+  followers: number;
+  following: number;
+  current_streak: number;
+  recovery_score: number;
+  total_workouts: number;
+  total_steps: number;
+  is_following: boolean;
+  is_friend: boolean;
+}
+

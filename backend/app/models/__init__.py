@@ -16,6 +16,18 @@ from app.models.sleep_record import SleepRecord
 from app.models.heart_rate_record import HeartRateRecord
 from app.models.personal_record import PersonalRecord
 from app.models.notification import Notification
+from app.models.social import (
+    Friendship,
+    Follow,
+    ActivityFeed,
+    Challenge,
+    ChallengeParticipant,
+    UserLevel,
+    Badge,
+    UserBadge,
+    Team,
+    TeamMember,
+)
 
 __all__ = [
     "User",
@@ -34,4 +46,14 @@ __all__ = [
     "HeartRateRecord",
     "PersonalRecord",
     "Notification",
+    "Friendship",
+    "Follow",
+    "ActivityFeed",
+    "Challenge",
+    "ChallengeParticipant",
+    "UserLevel",
+    "Badge",
+    "UserBadge",
+    "Team",
+    "TeamMember",
 ]

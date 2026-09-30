@@ -17,6 +17,12 @@ from app.api.v1 import (
     analytics,
     coach,
     integrations,
+    social,
+    challenges,
+    badges,
+    teams,
+    leaderboards,
+    profiles,
 )
 
 router = APIRouter(prefix="/v1")
@@ -40,5 +46,13 @@ router.include_router(coach.router)
 
 # Phase 6 – Wearables & Real-Time Health Intelligence
 router.include_router(integrations.router)
+
+# Phase 7 – Social Fitness Ecosystem
+router.include_router(social.router)
+router.include_router(challenges.router)
+router.include_router(badges.router)
+router.include_router(teams.router)
+router.include_router(leaderboards.router)
+router.include_router(profiles.router)
 
 __all__ = ["router"]

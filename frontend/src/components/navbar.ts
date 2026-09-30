@@ -29,6 +29,13 @@ export function renderNavbar(activePath = '/dashboard'): HTMLElement {
     { label: 'Video Analyzer', path: '/video', icon: 'video' },
     { label: 'Analytics', path: '/analytics', icon: 'chart-spline' },
     { label: 'Insights', path: '/insights', icon: 'sparkles' },
+    // Phase 7: Social
+    { label: 'Social', path: '/social', icon: 'activity' },
+    { label: 'Friends', path: '/friends', icon: 'users' },
+    { label: 'Leaderboards', path: '/leaderboards', icon: 'trophy' },
+    { label: 'Challenges', path: '/challenges', icon: 'swords' },
+    { label: 'Teams', path: '/teams', icon: 'shield' },
+    { label: 'Achievements', path: '/achievements', icon: 'award' },
     { label: 'Profile', path: '/profile', icon: 'user' },
   ];
 

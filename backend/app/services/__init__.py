@@ -22,6 +22,17 @@ from app.services.wearable_service import (
     PersonalRecordService,
     NotificationService,
 )
+from app.services.social_service import (
+    XPService,
+    BadgeService,
+    ActivityFeedService,
+    FriendshipService,
+    FollowService,
+    ChallengeService,
+    TeamService,
+    LeaderboardService,
+    SocialProfileService,
+)
 
 __all__ = [
     "AuthService",
@@ -44,5 +55,14 @@ __all__ = [
     "RecoveryService",
     "PersonalRecordService",
     "NotificationService",
+    "XPService",
+    "BadgeService",
+    "ActivityFeedService",
+    "FriendshipService",
+    "FollowService",
+    "ChallengeService",
+    "TeamService",
+    "LeaderboardService",
+    "SocialProfileService",
 ]
 

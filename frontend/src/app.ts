@@ -19,6 +19,15 @@ import { renderWaterPage } from './pages/water';
 import { renderStepsPage } from './pages/steps';
 import { renderWearablesPage } from './pages/wearables';
 
+// Phase 7: Social Fitness Ecosystem
+import { renderSocialPage } from './pages/social';
+import { renderFriendsPage } from './pages/friends';
+import { renderLeaderboardsPage } from './pages/leaderboards';
+import { renderChallengesPage } from './pages/challenges';
+import { renderTeamsPage } from './pages/teams';
+import { renderAchievementsPage } from './pages/achievements';
+import { renderAthletePage } from './pages/athlete';
+
 export function initApp(): void {
   // 1. Initialize animated ambient glassmorphism background
   initBackground();
@@ -42,7 +51,16 @@ export function initApp(): void {
     .addRoute('/video', () => renderVideoPage(), true)
     .addRoute('/analytics', () => renderAnalyticsPage(), true)
     .addRoute('/insights', () => renderInsightsPage(), true)
-    .addRoute('/profile', () => renderProfilePage(), true);
+    .addRoute('/profile', () => renderProfilePage(), true)
+
+    // Phase 7: Social Fitness routes
+    .addRoute('/social', () => renderSocialPage(), true)
+    .addRoute('/friends', () => renderFriendsPage(), true)
+    .addRoute('/leaderboards', () => renderLeaderboardsPage(), true)
+    .addRoute('/challenges', () => renderChallengesPage(), true)
+    .addRoute('/teams', () => renderTeamsPage(), true)
+    .addRoute('/achievements', () => renderAchievementsPage(), true)
+    .addRoute('/athlete/:username', (params) => renderAthletePage(params), true);
 
   // 3. Resolve initial route
   router.resolve();
