@@ -1,0 +1,538 @@
+<USER_REQUEST>
+You are a Senior Frontend Architect, Senior UI/UX Designer, and Senior TypeScript Engineer.
+
+Build the COMPLETE frontend for FitAI AI Fitness Coach.
+
+IMPORTANT:
+- Use TypeScript ONLY
+- Use Vite
+- Use HTML + CSS + TypeScript
+- DO NOT use React
+- DO NOT use Next.js
+- DO NOT use Angular
+- DO NOT use Vue
+- DO NOT use Bootstrap
+- DO NOT use Material UI
+
+Tech Stack:
+- TypeScript
+- Vite
+- Axios
+- Chart.js
+- GSAP
+- Lucide Icons
+
+==================================================
+DESIGN SYSTEM
+==================================================
+
+Create a PREMIUM glassmorphism UI inspired by:
+
+- Apple Vision Pro
+- Linear
+- Arc Browser
+- Stripe Dashboard
+- Tesla UI
+
+The UI must feel like a premium SaaS product worth $50/month.
+
+Avoid:
+- Student project look
+- Generic admin dashboard
+- Bootstrap styling
+- Material Design appearance
+
+==================================================
+COLOR SYSTEM
+==================================================
+
+:root {
+  --bg-primary: #050816;
+  --bg-secondary: #0f172a;
+
+  --glass-bg: rgba(255,255,255,0.08);
+  --glass-border: rgba(255,255,255,0.15);
+
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06b6d4;
+  --accent-purple: #8b5cf6;
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255,255,255,0.7);
+}
+
+==================================================
+GLASSMORPHISM STYLE
+==================================================
+
+Every card should use:
+
+background: rgba(255,255,255,0.08);
+
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+
+border: 1px solid rgba(255,255,255,0.15);
+
+box-shadow:
+0 8px 32px rgba(0,0,0,0.35),
+inset 0 1px 0 rgba(255,255,255,0.1);
+
+border-radius: 24px;
+
+Hover Effect:
+
+transform: translateY(-6px);
+transition: all .35s ease;
+
+==================================================
+BACKGROUND
+==================================================
+
+Create an animated background with:
+
+- Dark navy gradient
+- Floating blurred circles
+- Mesh gradient
+- Glowing particles
+- Subtle grid overlay
+- Smooth GSAP animations
+
+Look like:
+
+Apple Vision Pro
++
+Cyberpunk
++
+Fitness Platform
+
+==================================================
+AUTHENTICATION
+==================================================
+
+LOGIN PAGE
+
+Fields:
+
+- Email
+- Password
+
+Buttons:
+
+- Login
+- Create Account
+
+Features:
+
+- Glass card centered
+- Floating animations
+- Smooth transitions
+- Loading states
+
+--------------------------------------------------
+
+REGISTER PAGE
+
+Fields:
+
+- Full Name
+- Username
+- Email
+- Password
+- Height
+- Weight
+
+Features:
+
+- Glass card
+- Animated entrance
+- Validation
+- Responsive
+
+==================================================
+NAVIGATION
+==================================================
+
+Glass navbar.
+
+Menu:
+
+- Dashboard
+- Diet Planner
+- Workout Generator
+- Analytics
+- Video Analyzer
+- Insights
+- Profile
+- Logout
+
+Sticky navigation.
+
+Mobile hamburger menu.
+
+==================================================
+DASHBOARD
+==================================================
+
+Create a modern dashboard.
+
+Hero section:
+
+Welcome Back
+Today's Progress
+
+Animated circular progress indicator.
+
+--------------------------------------------------
+
+BMI CARD
+
+Display:
+
+- BMI Score
+- Category
+- Weight
+- Height
+
+Animated BMI meter.
+
+--------------------------------------------------
+
+CALORIE CARD
+
+Display:
+
+- Consumed
+- Remaining
+- Target
+
+Radial progress chart.
+
+--------------------------------------------------
+
+WATER CARD
+
+Display:
+
+- Water Intake
+- Daily Goal
+- Progress
+
+Animated water wave effect.
+
+--------------------------------------------------
+
+STEPS CARD
+
+Display:
+
+- Steps
+- Distance
+- Goal
+
+Animated counter.
+
+--------------------------------------------------
+
+WORKOUT CARD
+
+Display:
+
+- Workout Minutes
+- Calories Burned
+- Latest Workout
+
+==================================================
+AI DIET PLANNER
+==================================================
+
+API:
+
+POST /api/v1/diet/generate
+
+Create form:
+
+- Goal
+- Calories
+- Dietary Preference
+- Allergies
+
+Display generated plan as:
+
+Breakfast
+Lunch
+Snack
+Dinner
+
+Each meal card contains:
+
+- Calories
+- Protein
+- Carbs
+- Fat
+- Recipe Steps
+
+Beautiful timeline layout.
+
+==================================================
+AI WORKOUT GENERATOR
+==================================================
+
+API:
+
+POST /api/v1/workout-plans/generate
+
+Form:
+
+- Fitness Level
+- Goal
+- Equipment
+- Days Per Week
+
+Display workout split.
+
+Day Cards:
+
+Day 1
+Day 2
+Day 3
+Day 4
+
+Exercise Card:
+
+- Exercise Name
+- Sets
+- Reps
+- Rest Time
+- Coaching Tips
+
+==================================================
+VIDEO ANALYZER
+==================================================
+
+Most important page.
+
+Create drag-and-drop upload area.
+
+Features:
+
+Drag Video Here
+OR
+Choose File
+
+Supported:
+
+- mp4
+- mov
+- avi
+
+After upload:
+
+Show:
+
+- Upload animation
+- Processing animation
+- Progress indicator
+
+API:
+
+POST /api/v1/video/analyze
+
+Results UI:
+
+Form Score:
+Large animated score circle
+
+Rep Count:
+Animated counter
+
+Injury Risk:
+Colored badge
+
+Recommendations:
+Timeline cards
+
+Keypoint Checks:
+Interactive glass cards
+
+==================================================
+HEALTH INSIGHTS
+==================================================
+
+API:
+
+GET /api/v1/insights
+
+Display insights as premium glass notifications.
+
+Priority colors:
+
+- Green
+- Yellow
+- Red
+
+Include animations.
+
+==================================================
+ANALYTICS PAGE
+==================================================
+
+APIs:
+
+GET /api/v1/analytics/overview
+GET /api/v1/analytics/milestones
+
+Charts:
+
+- Weight Trend
+- BMI Trend
+- Calories Trend
+- Water Trend
+- Steps Trend
+
+Use Chart.js.
+
+Glass chart containers.
+
+==================================================
+MILESTONES
+==================================================
+
+Display achievement badges.
+
+Examples:
+
+- First Workout
+- 10k Steps
+- Healthy BMI
+- Biomechanics Pioneer
+
+Include:
+
+- Unlock animation
+- Glow effect
+- Progress tracking
+
+==================================================
+API LAYER
+==================================================
+
+Create:
+
+src/api/
+
+Files:
+
+- auth.ts
+- bmi.ts
+- calories.ts
+- workouts.ts
+- water.ts
+- steps.ts
+- diet.ts
+- video.ts
+- dashboard.ts
+- analytics.ts
+- insights.ts
+
+Axios setup:
+
+baseURL:
+http://localhost:8000/api/v1
+
+JWT:
+
+- Store token in localStorage
+- Auto attach Bearer token
+- Auto handle unauthorized responses
+
+==================================================
+PROJECT STRUCTURE
+==================================================
+
+src/
+│
+├── api/
+├── assets/
+├── components/
+├── pages/
+├── styles/
+├── utils/
+│
+├── app.ts
+├── router.ts
+├── main.ts
+│
+└── types/
+
+==================================================
+RESPONSIVE DESIGN
+==================================================
+
+Breakpoints:
+
+768px
+1024px
+1440px
+
+Requirements:
+
+- Mobile first
+- Tablet optimized
+- Desktop optimized
+
+Navbar collapses on mobile.
+
+Cards stack vertically.
+
+==================================================
+ANIMATIONS
+==================================================
+
+Use GSAP for:
+
+- Page transitions
+- Card reveals
+- Progress animations
+- Floating particles
+- Dashboard counters
+- Chart animations
+- Hover effects
+
+==================================================
+DELIVERABLES
+==================================================
+
+Generate:
+
+- Complete Vite project
+- All HTML pages
+- All TypeScript files
+- All CSS files
+- Glass UI components
+- API integrations
+- Dashboard implementation
+- Analytics charts
+- Diet planner
+- Workout generator
+- Video analyzer
+- Mobile responsiveness
+- Production-ready architecture
+
+Output the complete project file-by-file with full code and implementation details.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-29T23:37:15+05:30.
+
+The user's current state is as follows:
+Active Document: d:\FitAI\backend\app\models\user.py (LANGUAGE_PYTHON)
+Cursor is on line: 1
+Other open documents:
+- d:\FitAI\backend\app\models\user.py (LANGUAGE_PYTHON)
+- d:\FitAI\backend\app\models\bmi.py (LANGUAGE_PYTHON)
+- d:\FitAI\backend\app\models\calorie.py (LANGUAGE_PYTHON)
+</ADDITIONAL_METADATA>
