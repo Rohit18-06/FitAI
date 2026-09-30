@@ -82,6 +82,25 @@ from app.schemas.training import (
     PlateauReport,
 )
 
+# Phase 9: AI Computer Vision Coaching 2.0 schemas
+from app.schemas.vision_trainer import (
+    Keypoint2D,
+    PoseAnalyzeRequest,
+    PoseAnalyzeResponse,
+    ExerciseRecognitionResponse,
+    RepCounterResponse,
+    FormCorrectionResponse,
+    LiveCoachSessionCreate,
+    LiveCoachSessionResponse,
+    LiveCoachCueResponse,
+    MovementItemResponse,
+    WorkoutAutomationRequest,
+    WorkoutAutomationResponse,
+    AdaptivePlanRequest,
+    AdaptivePlanResponse,
+    TrainerAnalyticsResponse,
+)
+
 __all__ = [
     # Auth
     "RegisterRequest",
@@ -158,5 +177,21 @@ __all__ = [
     "ProgressPhotoResponse",
     "InjuryRiskResponse",
     "PlateauReport",
+    # Phase 9 CV Coaching
+    "Keypoint2D",
+    "PoseAnalyzeRequest",
+    "PoseAnalyzeResponse",
+    "ExerciseRecognitionResponse",
+    "RepCounterResponse",
+    "FormCorrectionResponse",
+    "LiveCoachSessionCreate",
+    "LiveCoachSessionResponse",
+    "LiveCoachCueResponse",
+    "MovementItemResponse",
+    "WorkoutAutomationRequest",
+    "WorkoutAutomationResponse",
+    "AdaptivePlanRequest",
+    "AdaptivePlanResponse",
+    "TrainerAnalyticsResponse",
 ]
 

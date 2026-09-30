@@ -44,6 +44,17 @@ from app.services.training_ai_service import (
     GoalTrackingService,
     WeeklyReportService,
 )
+from app.services.vision_trainer_service import (
+    PoseMathService,
+    ExerciseRecognitionService,
+    RepCounterService,
+    FormCorrectionService,
+    LiveCoachService,
+    AdaptiveTrainingService,
+    SmartWorkoutAutomationService,
+    MovementLibraryService,
+    TrainerAnalyticsService,
+)
 
 __all__ = [
     "AuthService",
@@ -84,5 +95,15 @@ __all__ = [
     "ProgressPhotoService",
     "GoalTrackingService",
     "WeeklyReportService",
+    # Phase 9
+    "PoseMathService",
+    "ExerciseRecognitionService",
+    "RepCounterService",
+    "FormCorrectionService",
+    "LiveCoachService",
+    "AdaptiveTrainingService",
+    "SmartWorkoutAutomationService",
+    "MovementLibraryService",
+    "TrainerAnalyticsService",
 ]
 

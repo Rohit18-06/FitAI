@@ -41,6 +41,8 @@ export function renderNavbar(activePath = '/dashboard'): HTMLElement {
     { label: 'Smart Coach', path: '/smart-coach', icon: 'brain' },
     { label: 'Progressions', path: '/progressions', icon: 'trending-up' },
     { label: 'Body & Goals', path: '/body-goals', icon: 'target' },
+    // Phase 9: AI Computer Vision Studio
+    { label: 'AI Studio', path: '/trainer', icon: 'camera' },
     { label: 'Profile', path: '/profile', icon: 'user' },
   ];
 

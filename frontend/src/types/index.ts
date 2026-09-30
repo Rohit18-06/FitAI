@@ -917,4 +917,131 @@ export interface WeeklyReportResponse {
   created_at: string;
 }
 
+// ═══════════════════════════════════════════════════════════════
+// Phase 9: AI Computer Vision Coaching 2.0 Types
+// ═══════════════════════════════════════════════════════════════
+
+export interface Keypoint2D {
+  x: number;
+  y: number;
+  z?: number;
+  visibility?: number;
+}
+
+export interface PoseAnalyzeRequest {
+  keypoints: Keypoint2D[];
+  exercise_hint?: string;
+  session_id?: number;
+  frame_timestamp_ms?: number;
+}
+
+export interface PoseAnalyzeResponse {
+  exercise: string;
+  confidence: number;
+  posture_score: number;
+  rep_count: number;
+  stage: string;
+  joint_angles: Record<string, number>;
+  mistakes: string[];
+  corrections: string[];
+  injury_risk: string;
+  coach_cue: string;
+  fps?: number;
+}
+
+export interface LiveCoachSessionCreate {
+  exercise_name: string;
+  target_reps?: number;
+  target_sets?: number;
+}
+
+export interface LiveCoachSessionResponse {
+  id: number;
+  user_id: number;
+  exercise_name: string;
+  target_reps: number;
+  target_sets: number;
+  completed_reps: number;
+  completed_sets: number;
+  avg_form_score: number;
+  avg_tempo?: number | null;
+  injury_risk_level: string;
+  status: string;
+  feedback_history: string[];
+  started_at: string;
+  ended_at?: string | null;
+}
+
+export interface MovementItemResponse {
+  id: number;
+  name: string;
+  slug: string;
+  category: string;
+  equipment: string;
+  difficulty: string;
+  primary_muscles: string[];
+  secondary_muscles: string[];
+  instructions: string[];
+  common_mistakes: string[];
+  coaching_cues: string[];
+  demo_video_url?: string | null;
+}
+
+export interface WorkoutExerciseItem {
+  name: string;
+  target_sets: number;
+  target_reps: string;
+  rest_seconds: number;
+  tempo: string;
+  notes?: string | null;
+}
+
+export interface WorkoutRoutineBlock {
+  block_name: string;
+  estimated_duration_min: number;
+  exercises: WorkoutExerciseItem[];
+}
+
+export interface WorkoutAutomationRequest {
+  target_muscle?: string;
+  intensity?: string;
+  duration_minutes?: number;
+}
+
+export interface WorkoutAutomationResponse {
+  session_title: string;
+  total_duration_min: number;
+  coaching_focus: string;
+  flow: WorkoutRoutineBlock[];
+}
+
+export interface AdaptivePlanRequest {
+  soreness_level?: string;
+  fatigue_score?: number;
+}
+
+export interface AdaptivePlanResponse {
+  recovery_score: number;
+  adjustment_type: string;
+  volume_multiplier: number;
+  recommended_reps_delta: number;
+  deload_recommended: boolean;
+  recommendations: string[];
+}
+
+export interface TrainerAnalyticsResponse {
+  total_sessions: number;
+  total_reps_logged: number;
+  overall_avg_form_score: number;
+  form_score_history: Array<{
+    date: string;
+    exercise: string;
+    score: number;
+    reps: number;
+  }>;
+  volume_by_exercise: Record<string, number>;
+  injury_risk_distribution: Record<string, number>;
+}
+
+
 

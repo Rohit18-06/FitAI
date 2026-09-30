@@ -99,6 +99,16 @@ class User(Base):
     injury_assessments = relationship(
         "InjuryRiskAssessment", back_populates="user", cascade="all, delete-orphan", lazy="select"
     )
+    # Phase 9: AI Computer Vision Trainer 2.0
+    trainer_sessions = relationship(
+        "TrainerSession", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
+    pose_logs = relationship(
+        "PoseAnalysisLog", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
+    adaptive_plans = relationship(
+        "TrainerAdaptivePlan", back_populates="user", cascade="all, delete-orphan", lazy="select"
+    )
 
     def __repr__(self) -> str:
         return f"<User(id={self.id}, email={self.email!r}, username={self.username!r})>"

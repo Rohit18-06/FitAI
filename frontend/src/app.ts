@@ -34,6 +34,9 @@ import { renderSmartCoachPage } from './pages/smartCoach';
 import { renderProgressionsPage } from './pages/progressions';
 import { renderBodyGoalsPage } from './pages/bodyGoals';
 
+// Phase 9: AI Computer Vision Studio
+import { renderTrainerStudioPage } from './pages/trainerStudio';
+
 export function initApp(): void {
   // 1. Initialize animated ambient glassmorphism background
   initBackground();
@@ -72,7 +75,10 @@ export function initApp(): void {
     .addRoute('/training-programs', () => renderTrainingProgramsPage(), true)
     .addRoute('/smart-coach', () => renderSmartCoachPage(), true)
     .addRoute('/progressions', () => renderProgressionsPage(), true)
-    .addRoute('/body-goals', () => renderBodyGoalsPage(), true);
+    .addRoute('/body-goals', () => renderBodyGoalsPage(), true)
+
+    // Phase 9: AI Trainer Studio (Computer Vision)
+    .addRoute('/trainer', () => renderTrainerStudioPage(), true);
 
   // 3. Resolve initial route
   router.resolve();

@@ -40,6 +40,12 @@ from app.models.training import (
     ProgressPhoto,
     InjuryRiskAssessment,
 )
+from app.models.vision_trainer import (
+    TrainerSession,
+    PoseAnalysisLog,
+    MovementLibraryItem,
+    TrainerAdaptivePlan,
+)
 
 __all__ = [
     "User",
@@ -79,4 +85,10 @@ __all__ = [
     "BodyMeasurement",
     "ProgressPhoto",
     "InjuryRiskAssessment",
+    # Phase 9
+    "TrainerSession",
+    "PoseAnalysisLog",
+    "MovementLibraryItem",
+    "TrainerAdaptivePlan",
 ]
+

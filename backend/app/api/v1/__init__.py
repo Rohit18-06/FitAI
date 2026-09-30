@@ -25,6 +25,7 @@ from app.api.v1 import (
     profiles,
     training_programs,
     training,
+    vision_trainer,
 )
 
 router = APIRouter(prefix="/v1")
@@ -60,5 +61,8 @@ router.include_router(profiles.router)
 # Phase 8 – AI Personal Trainer & Smart Coaching
 router.include_router(training_programs.router)
 router.include_router(training.router)
+
+# Phase 9 – AI Computer Vision Coaching 2.0
+router.include_router(vision_trainer.router)
 
 __all__ = ["router"]

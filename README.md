@@ -16,14 +16,15 @@ FitAI is developed across 8 core engineering phases:
 - **Phase 6: Wearables & Real-Time Health Intelligence** — Health Connect, Google Fit, and Apple Health ingestion, sleep stage analytics, HRV/Resting HR, and Personal Records.
 - **Phase 7: Social Fitness Ecosystem** — Friendships, follower networks, global & friend activity feeds, interactive challenges, teams, and XP/Badge gamification.
 - **Phase 8: AI Personal Trainer & Smart Coaching Platform** — Multi-week sports-science periodization, daily recovery readiness scoring, biomechanical injury risk radar, automated 21-day plateau detection, progressive overload 1RM calculations (Brzycki formula), and weekly AI coaching reports.
+- **Phase 9: AI Personal Trainer & Computer Vision Coaching 2.0** — Real-time pose estimation (MediaPipe 33 keypoints), automated 10-movement exercise recognition, state-machine rep counter (lockout/inflection/tempo tracking), live form correction engine (valgus, depth, spinal neutrality), injury-risk biomechanical radar, smart workout automation, 100+ exercise movement library, and full-screen AI Trainer Studio (`#/trainer`).
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Backend**: Python 3.12, FastAPI, SQLAlchemy ORM, Pydantic v2, SQLite / PostgreSQL, PyJWT, Pytest.
-- **Frontend**: TypeScript, Vite, Vanilla CSS (Glassmorphism design system), GSAP animations, Lucide icons, Chart.js.
-- **AI & Sports Science**: Google Gemini API, Brzycki 1RM formula, Biomechanical risk engine, Rolling-window plateau analysis.
+- **Backend**: Python 3.12, FastAPI, SQLAlchemy ORM, Pydantic v2, NumPy, OpenCV, MediaPipe, SQLite / PostgreSQL, PyJWT, Pytest.
+- **Frontend**: TypeScript, Vite, Vanilla CSS (Glassmorphism design system), GSAP animations, Lucide icons, Chart.js, WebRTC, Canvas 2D Skeleton HUD, Web Speech API.
+- **AI & Sports Science**: Google Gemini 2.5, MediaPipe 33-point Landmark Pose Kinematics, Brzycki 1RM formula, Biomechanical risk engine, Rolling-window plateau analysis.
 
 ---
 
@@ -72,7 +73,7 @@ Run backend integration test suites:
 
 ```bash
 cd backend
-venv\Scripts\python -m pytest tests/test_phase8.py -v
+venv\Scripts\python -m pytest tests/test_phase8.py tests/test_phase9.py -v
 ```
 
 Run frontend typechecking & production build:
